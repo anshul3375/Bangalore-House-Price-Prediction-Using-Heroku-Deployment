@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>House Price Predictor</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_second">House Price Prediction</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+            <!-- Prediction Form -->
+            <div class='div2'>
+                <form action="{{ url_for('predict') }}" method="POST">
+                    <!-- Area Dropdown -->
+                    <select class="form-input align-center" name="area">
+                        <option value="none">--- Select the area---</option>
+                        <option value="Whitefield">Whitefield</option>
+                        <option value="Sarjapur Road">Sarjapur Road</option>
+                        <option value="Electronic City">Electronic City</option>
+                        <option value="Kanakpura Road">Kanakpura Road</option>
+                        <option value="Yelahanka">Yelahanka</option>
+                        <option value="Uttarahalli">Uttarahalli</option>
+                        <option value="Hebbal">Hebbal</option>
+                        <option value="Marathahalli">Marathahalli</option>
+                        <option value="Raja Rajeshwari Nagar">Raja Rajeshwari Nagar</option>
+                        <option value="Bannerghatta Road">Bannerghatta Road</option>
+                        <option value="7th Phase JP Nagar">7th Phase JP Nagar</option>
+                        <option value="Electronic City Phase II">Electronic City Phase II</option>
+                        <option value="Rajaji Nagar">Rajaji Nagar</option>
+                        <option value="Bellandur">Bellandur</option>
+                        <option value="KR Puram">KR Puram</option>
+                        <option value="Electronics City Phase 1">Electronics City Phase 1</option>
+                        <option value="Yeshwanthpur">Yeshwanthpur</option>
+                        <option value="Sarjapur">Sarjapur</option>
+                        <option value="Banashankari">Banashankari</option>
+                        <option value="Kengeri">Kengeri</option>
+                        <option value="Koramangala">Koramangala</option>
+                        <option value="JP Nagar">JP Nagar</option>
+                        <option value="Malleshwaram">Malleshwaram</option>                       
+                        <option value="8th Phase JP Nagar">8th Phase JP Nagar</option>
+                        <option value="HSR Layout">HSR Layout</option>
+                        <option value="Mysore Road">Mysore Road</option>
+                        <option value="Hosur Road">Hosur Road</option>
+                        <option value="Brookefield">Brookefield</option>
+                        <option value="Indira Nagar">Indira Nagar</option>
+                        <option value="CV Raman Nagar">CV Raman Nagar</option>
+
+                        
+                    </select><br>
+
+                    <input class="form-input" type="text" name="BHK" placeholder="BHK eg. 1,2,3"><br>
+                    <input class="form-input" type="text" name="total_sqft" placeholder="total_sqft eg. 1310"><br>
+                    <input class="form-input" type="text" name="bath" placeholder="bath eg. 0,1,2,3"><br>
+                    <input class="form-input" type="text" name="balcony" placeholder="balcony eg. 0,1,2,3"><br>
+                    
+
+			<input type="submit" class="myButton" value="Predict Price">
+        	</form>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/anshul3375"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/anshul-agarwal-73174ab8/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made by Anshul Agarwal.</p>
+       </div>
+
+    </body>
+</html>
